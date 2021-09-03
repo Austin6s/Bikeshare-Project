@@ -2,7 +2,12 @@ import time
 import pandas as pd
 import sys
 
+<<<<<<< HEAD
 #Adding this comment to have something to pull
+||||||| parent of 20ddfd3 (Added a comment at the top)
+=======
+#Pushed this project to a remote git repository on Github
+>>>>>>> 20ddfd3 (Added a comment at the top)
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv',
