@@ -52,7 +52,7 @@ def get_filters():
     city = input_prompt('Which city would you like to see data from? (Chicago, New York, or Washington)', CITY_DATA)
 
     #filter by month or day or all (both)
-    fltr = input_prompt('Select your filter: month, day, none. (For example, if you select \'month,\' no day data will be displayed and vice versa. If you select, \'none,\' then you will have access to both', ['month', 'day', 'none'])
+    fltr = input_prompt('Select your filter: month, day, both.', ['month', 'day', 'none'])
 
     #define acceptable inputs for both the month and day variables
     months = ['january', 'february', 'march', 'april', 'may', 'june', 'all']
