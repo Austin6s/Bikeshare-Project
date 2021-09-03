@@ -4,6 +4,7 @@ import sys
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ||||||| parent of e19af20 (Just slightly changed some alignment)
 
 =======
@@ -18,6 +19,10 @@ import sys
 =======
 
 >>>>>>> e19af20 (Just slightly changed some alignment)
+||||||| parent of 3e1e194 (Added another comment for fun)
+=======
+#I need to make a change to this code but idk what to change since it's already awesome and I don't want to break it haha
+>>>>>>> 3e1e194 (Added another comment for fun)
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv',
