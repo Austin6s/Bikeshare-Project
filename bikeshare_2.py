@@ -3,11 +3,21 @@ import pandas as pd
 import sys
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+||||||| parent of e19af20 (Just slightly changed some alignment)
+
+=======
+>>>>>>> e19af20 (Just slightly changed some alignment)
 #Adding this comment to have something to pull
 ||||||| parent of 20ddfd3 (Added a comment at the top)
 =======
 #Pushed this project to a remote git repository on Github
+<<<<<<< HEAD
 >>>>>>> 20ddfd3 (Added a comment at the top)
+||||||| parent of e19af20 (Just slightly changed some alignment)
+=======
+
+>>>>>>> e19af20 (Just slightly changed some alignment)
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv',
