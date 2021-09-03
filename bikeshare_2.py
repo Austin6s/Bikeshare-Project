@@ -2,6 +2,7 @@ import time
 import pandas as pd
 import sys
 
+#I need to make a change to this code but idk what to change since it's already awesome and I don't want to break it haha
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv',
@@ -12,13 +13,13 @@ CITY_DATA = { 'chicago': 'chicago.csv',
 
 def input_prompt(message, valid_input_list):
     '''This function is to handle user inputs that may be invalid and provides a simple workflow to walk through a process for whatever the user inputs
-    
+
     INPUT:
     message: str. The initial message requesting the user input.
     valid_input_list: list. The list containing all of the acceptable inputs from the user.
-    
+
     OUTPUT: A valid user input.'''
-    
+
     while True:
             initial_input = input(message + '\n').lower()
             print()
@@ -45,14 +46,14 @@ def get_filters():
     #first I want to set month and day variable to null values to avoid any UnboundLocalErrors if the user chooses to look at only one of those variables
     month = None
     day = None
-    
+
     print('Hello! Let\'s explore some US bikeshare data!\n')
     # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     city = input_prompt('Which city would you like to see data from? (Chicago, New York, or Washington)', CITY_DATA)
-                
+
     #filter by month or day or all (both)
     fltr = input_prompt('Select your filter: month, day, none. (For example, if you select \'month,\' no day data will be displayed and vice versa. If you select, \'none,\' then you will have access to both', ['month', 'day', 'none'])
-                
+
     #define acceptable inputs for both the month and day variables
     months = ['january', 'february', 'march', 'april', 'may', 'june', 'all']
     days = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'all']
@@ -63,12 +64,12 @@ def get_filters():
     if fltr in ['day', 'none']:
         day = input_prompt('Which day of the week? (for all days of the week type \'all\')', days)
     print('-'*40)
-    
+
     return city, month, day
 
 def display_data(df):
     '''Upon request, displays data 5 rows at a time'''
-    
+
     response = input_prompt('Before we show some random stats we thought were cool, would you like to dig into this juicy dataset a bit yourself? If you would like to view 5 rows of individual trip data, enter \'yes\'. Otherwise enter \'no\' to move on with your life.', ['yes', 'no', 'y', 'n', 'sure', 'nah'])
     start_loc = 0
     while response in ['yes', 'y', 'sure']:
@@ -76,7 +77,7 @@ def display_data(df):
         print(df.iloc[start_loc:start_loc + 5])
         start_loc += 5
         response = input_prompt('Hey there dataphile! Want to see 5 more rows of this super duper cool dataset?', ['yes', 'no', 'y', 'n', 'nah', 'sure'])
-    print('-'*40)    
+    print('-'*40)
     print('Okay chill for a second while we show you the stats we feel like showing you, but don\'t worry you don\'t have to wait long because this code was written super efficiently ;)')
 
 def load_data(city, month, day):
@@ -90,7 +91,7 @@ def load_data(city, month, day):
     Returns:
         df - Pandas DataFrame containing city data filtered by month and day
     """
-    
+
     # load data file into a dataframe
     df = pd.read_csv(CITY_DATA[city])
 
@@ -118,14 +119,14 @@ def load_data(city, month, day):
         # filter by day of week to create the new dataframe
         df = df[df['day_of_week'] == day]
 
-    return df    
+    return df
 
 def time_stats(df):
     """Displays statistics on the most frequent times of travel."""
 
     print('\nCalculating The Most Frequent Times of Travel...\n')
     start_time = time.time()
-    
+
     # display the most common month
     months = ['january', 'february', 'march', 'april', 'may', 'june']
     pop_month = df['month'].mode()[0]
@@ -137,7 +138,7 @@ def time_stats(df):
     pop_day = df['day_of_week'].mode()[0]
     print('Most popular day of the week: ')
     print(days[pop_day].title())
-    
+
     # display the most common start hour
     pop_hour = df['hour'].mode()[0]
     print('Most popular hour: ')
@@ -154,11 +155,11 @@ def station_stats(df):
     start_time = time.time()
 
     # display most commonly used start station
-    pop_start = df['Start Station'].mode()[0]   
+    pop_start = df['Start Station'].mode()[0]
     print('Most popular start station is:')
     print(pop_start)
     # display most commonly used end station
-    pop_end = df['End Station'].mode()[0]   
+    pop_end = df['End Station'].mode()[0]
     print('Most popular end station is:')
     print(pop_end)
 
