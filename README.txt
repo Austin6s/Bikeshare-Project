@@ -1,4 +1,4 @@
-# Bikeshare Project
+# Bikeshare Project-- This is the README for the Bikeshare project and NOT for the git project.
 
 The purpose of this project is to use pandas to read a .csv file from three different data sets and calculate interesting statistics dependent on filters designated by the user. The data sets all contain information about the bikeshare system in three major cities: Chicago, New York, and Washington.
 
