@@ -2,27 +2,6 @@ import time
 import pandas as pd
 import sys
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-||||||| parent of e19af20 (Just slightly changed some alignment)
-
-=======
->>>>>>> e19af20 (Just slightly changed some alignment)
-#Adding this comment to have something to pull
-||||||| parent of 20ddfd3 (Added a comment at the top)
-=======
-#Pushed this project to a remote git repository on Github
-<<<<<<< HEAD
->>>>>>> 20ddfd3 (Added a comment at the top)
-||||||| parent of e19af20 (Just slightly changed some alignment)
-=======
-
->>>>>>> e19af20 (Just slightly changed some alignment)
-||||||| parent of 3e1e194 (Added another comment for fun)
-=======
-#I need to make a change to this code but idk what to change since it's already awesome and I don't want to break it haha
->>>>>>> 3e1e194 (Added another comment for fun)
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv',
@@ -96,7 +75,7 @@ def display_data(df):
         pd.set_option('display.max_columns', None)
         print(df.iloc[start_loc:start_loc + 5])
         start_loc += 5
-        response = input_prompt('Hey there dataphile! Want to see 5 more rows of this super duper cool dataset?', ['yes', 'no', 'y', 'n', 'nah', 'sure'])
+        response = input_prompt('\nHey there dataphile! Want to see 5 more rows of this super duper cool dataset? (y/n)', ['yes', 'no', 'y', 'n', 'nah', 'sure'])
     print('-'*40)
     print('Okay chill for a second while we show you the stats we feel like showing you, but don\'t worry you don\'t have to wait long because this code was written super efficiently ;)')
 
